@@ -6,13 +6,6 @@
 |________________________________________________|
 */
 
-#include<stdio.h>
-#include<stdlib.h>
-#include<math.h>
-#include<string.h>
-#include<limits.h>
-#define SIZE 1000
-
 void sort(char a[100][100], int n)
 {
 	char temp[100];
@@ -30,14 +23,19 @@ void sort(char a[100][100], int n)
         }
 }
 
-void ex1(char *str[],int n){
+void ex1(char str[100][100],int n){
 		char result[100];
-		sort(str, n);
-		for (int i = 0; i < strlen(str[0]); i++)
+		char a[100][100];
+		for(int i=0;i<n;i++)
 		{
-			if (str[0][i] == str[n - 1][i])
+			strcpy(a[i],str[i]);
+		}
+		sort(a, n);
+		for (int i = 0; i < strlen(a[0]); i++)
+		{
+			if (a[0][i] == a[n - 1][i])
 			{
-				result[i] = str[0][i];
+				result[i] = a[0][i];
 			}
 			else
 			{
@@ -47,11 +45,11 @@ void ex1(char *str[],int n){
 	puts(result);
 	
 }
-
 int main(int argc, char *argv[]) {
 	
-	char *str[]={"abc","abcd","abe","abdr"};
+	char str[100][100]={"abc","abcd","abe","abdr"};
 	ex1(str,4);
 			
 	return 0;
 }
+
