@@ -16,8 +16,9 @@ Ex:
 #define SIZE 1000
 void remove(char str[100][100], int vt, int *n)
 {
+	int i;
 	int x=*n;
-	for (int i = vt; i < x -1; i++)
+	for (i = vt; i < x -1; i++)
 	{
 	      strcpy(str[i],str[i+1]);
 	}
