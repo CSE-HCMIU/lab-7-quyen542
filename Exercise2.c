@@ -15,13 +15,24 @@ Ex:
 #include<limits.h>
 #define SIZE 1000
 
-void ex2(char *str[],int n){
-	//your codes here
+void ex2(char str[100][100],int n){
+	int x=n;
+        for(int i=0;i<n;i++)
+	{
+		for(int j=i+1;j<n;j++)
+		{
+			if(str[i]==str[j])
+			{
+				x--;
+			}
+		}
+	}
+	printf("%d",x);
 }
 
 int main(int argc, char *argv[]) {
 	
-	char *str[]={"ab","abcd","ab","abdr"};
+	char str[100][100]={"ab","abcd","ab","abdr"};
     ex2(str,4);
 		
 	return 0;
