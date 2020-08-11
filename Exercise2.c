@@ -14,24 +14,24 @@ Ex:
 #include<string.h>
 #include<limits.h>
 #define SIZE 1000
-void remove(char str[100][100], int vt, int &n)
+void remove(char str[100][100], int vt, int *n)
 {
-	for (int i = vt; i < n -1; i++)
+	int x=*n;
+	for (int i = vt; i < x -1; i++)
 	{
 	      strcpy(str[i],str[i+1]);
 	}
-	n--;
+	*n=x-1;
 }
 
 void ex2(char str[100][100],int n){
-	
         for(int i=0;i<n;i++)
 	{
 		for(int j=i+1;j<n;j++)
 		{
 			if(strcmp(str[i],str[j])==0)
 			{
-				remove(str,j,n);
+				remove(str,j,&n);
 				j--;
 			}
 		}
