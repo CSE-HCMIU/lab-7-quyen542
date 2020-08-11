@@ -14,20 +14,29 @@ Ex:
 #include<string.h>
 #include<limits.h>
 #define SIZE 1000
+void remove(char str[100][100], int vt, int& n)
+{
+	for (int i = vt; i < n -1; i++)
+	{
+	      strcpy(str[i],str[i+1]);
+	}
+	n--;
+}
 
 void ex2(char str[100][100],int n){
-	int x=n;
+	
         for(int i=0;i<n;i++)
 	{
 		for(int j=i+1;j<n;j++)
 		{
 			if(strcmp(str[i],str[j])==0)
 			{
-				x--;
+				remove(str,j,n);
+				j--;
 			}
 		}
 	}
-	printf("%d",x);
+	printf("%d",n);
 }
 
 int main(int argc, char *argv[]) {
@@ -37,3 +46,4 @@ int main(int argc, char *argv[]) {
 		
 	return 0;
 }
+
