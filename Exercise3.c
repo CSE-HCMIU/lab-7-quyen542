@@ -60,7 +60,7 @@ void number(int *a, int *b, char c[])
 	*a=a1;
 	*b=b1;
 }
-void remove(char a[], int vt, int *n)
+void re(char a[], int vt, int *n)
 {
 	int x=*n;
 	for (int i = vt; i < x -1; i++)
@@ -114,7 +114,7 @@ void ex3(char s1[], char s2[]){
 	   }
 	   else 
 	   {
-	   	remove(result,j,&x);
+	   	re(result,j,&x);
 	   	j--;
 	   }
 	}
