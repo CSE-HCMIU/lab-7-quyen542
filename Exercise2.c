@@ -21,7 +21,7 @@ void ex2(char str[100][100],int n){
 	{
 		for(int j=i+1;j<n;j++)
 		{
-			if(strcmp(a[i],a[j])==0)
+			if(strcmp(str[i],str[j])==0)
 			{
 				x--;
 			}
