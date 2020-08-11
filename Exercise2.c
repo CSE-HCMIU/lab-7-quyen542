@@ -14,7 +14,7 @@ Ex:
 #include<string.h>
 #include<limits.h>
 #define SIZE 1000
-void remove(char str[100][100], int vt, int *n)
+void re(char str[100][100], int vt, int *n)
 {
 	int i;
 	int x=*n;
@@ -33,7 +33,7 @@ void ex2(char str[100][100],int n){
 		{
 			if(strcmp(str[i],str[j])==0)
 			{
-				remove(str,j,&n);
+				re(str,j,&n);
 				j--;
 			}
 		}
