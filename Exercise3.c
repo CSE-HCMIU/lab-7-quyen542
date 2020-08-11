@@ -67,8 +67,8 @@ void ex3(char s1[], char s2[]){
 	number(&a1, &b1, s2);
 	int m = a * a1 - b * b1;
 	int n = a * b1 + a1 * b;
-	itoa(m,temp1,10);
-	itoa(n,temp2,10);
+	sprintf(temp1,"%d",m);
+	sprintf(temp2,"%d",n);
 	strcpy(result,temp1);
 	if (n > 0)
 	{
