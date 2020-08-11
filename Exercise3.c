@@ -72,7 +72,6 @@ void ex3(char s1[], char s2[]){
 	strcpy(result,temp1);
 	if (n > 0)
 	{
-		result[strlen(result)]='+';
 		strcat(result,temp2);
 		result[strlen(result)]='i';
 	}
