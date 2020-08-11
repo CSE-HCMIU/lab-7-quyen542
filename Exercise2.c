@@ -25,9 +25,10 @@ void remove(char str[100][100], int vt, int *n)
 }
 
 void ex2(char str[100][100],int n){
-        for(int i=0;i<n;i++)
+        int i,j;
+	for(i=0;i<n;i++)
 	{
-		for(int j=i+1;j<n;j++)
+		for(j=i+1;j<n;j++)
 		{
 			if(strcmp(str[i],str[j])==0)
 			{
