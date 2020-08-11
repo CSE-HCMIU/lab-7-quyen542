@@ -14,13 +14,13 @@ Ex:
 #include<string.h>
 #include<limits.h>
 #define SIZE 1000
-void remove(char str[100][100], int vt, int *n)
+void remove(char str[100][100], int vt, int &n)
 {
 	for (int i = vt; i < n -1; i++)
 	{
 	      strcpy(str[i],str[i+1]);
 	}
-	*n--;
+	n--;
 }
 
 void ex2(char str[100][100],int n){
@@ -31,7 +31,7 @@ void ex2(char str[100][100],int n){
 		{
 			if(strcmp(str[i],str[j])==0)
 			{
-				remove(str,j,&n);
+				remove(str,j,n);
 				j--;
 			}
 		}
@@ -46,4 +46,3 @@ int main(int argc, char *argv[]) {
 		
 	return 0;
 }
-
