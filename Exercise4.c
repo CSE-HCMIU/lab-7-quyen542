@@ -7,11 +7,11 @@ Ex:
 | Output: 1010                                             |
 |__________________________________________________________|
 */
-#include<stdio.h>
-#include<stdlib.h>
-#include<math.h>
-#include<string.h>
-#include<limits.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <string.h>
+#include <limits.h>
 #define SIZE 1000
 
 int b2d(int n)
