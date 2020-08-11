@@ -13,7 +13,16 @@ Ex:
 #include <string.h>
 #include <limits.h>
 #define SIZE 1000
-
+int pow(int n, int i)
+{
+   int x;
+   x=1;
+   for(int j=1;j<=i;j++)
+   {
+	   x=x*n;
+   }
+	return x;
+}
 int b2d(int n)
 {
 	int dec = 0;
