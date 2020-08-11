@@ -60,6 +60,16 @@ void number(int *a, int *b, char c[])
 	*a=a1;
 	*b=b1;
 }
+void remove(char a[], int vt, int *n)
+{
+	int x=*n;
+	for (int i = vt; i < x -1; i++)
+	{
+		a[i] = a[i + 1];
+	}
+	a[x-1]='\0';
+	*n=x-1;
+}
 void ex3(char s1[], char s2[]){
 	char  result[100], temp1[100], temp2[100];
 	int a, b, a1, b1;
@@ -82,6 +92,31 @@ void ex3(char s1[], char s2[]){
 		strcat(result,temp2);
 		result[strlen(result)]='i';
 
+	}
+	int x=strlen(result);
+	for(int j=0; j<x;j++)
+	{
+	   if(result[j]=='-')
+	   {
+	   	continue;
+	   }
+	   else if(result[j]=='+')
+	   {
+	   	continue;
+	   }
+	   else if (result[j]>=48 && result[j]<=57)
+	   {
+	   	continue;
+	   }
+	   else if(result[j]=='i')
+	   {
+	   	continue;
+	   }
+	   else 
+	   {
+	   	remove(result,j,&x);
+	   	j--;
+	   }
 	}
 	 printf("%s",result);
 }
